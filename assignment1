@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //there needs to be a scanner at the beginning of the program
+        // to retrieve user input.
+        // sc is one of many possible placeholders that can be done.
+        System.out.println("How old are you?");
+        String input = sc.nextLine();
+        System.out.println("you are" + " " + (input) + " years old" );
+
+        int num1 = 10;
+        int num2 = 37;
+        System.out.println(num1 + num2);
+
+        //what I learned is how to use a scanner and ask the user
+        //for input. I also learned how to add space between my strings
+        //variables created
+
+
+    }
+}
