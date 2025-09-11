@@ -1,0 +1,92 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hello, my name is Seema and I'm majoring in IT");
+        System.out.println("What is your name?");
+        String username = sc.nextLine();
+        System.out.println("Hello," + (username));
+        System.out.println("We will be playing a brief math quiz");
+
+        System.out.println("What is 5 x 4?");
+        int Score =0;
+        int answer1 = sc.nextInt();
+        if (answer1 == 20) {
+            System.out.println("Correct!");
+            Score = Score +1;
+        }else {
+            System.out.println("Incorrect");
+        }
+        System.out.println("What is 9 x 8?");
+        int answer2 = sc.nextInt();
+        if (answer2 == 72) {
+            System.out.println("Correct!");
+            Score = Score +1;
+        }else {
+            System.out.println("Incorrect");
+        }
+        System.out.println("What is 10/2?");
+            int answer3 = sc.nextInt();
+            if (answer3 == 5) {
+                System.out.println("Correct!");
+                Score = Score +1;
+            }else {
+                System.out.println("Incorrect");
+            }
+        System.out.println("you got" + " " + (Score) + "/3");
+
+
+
+    }
+}
+
+    // i created a simple multiplication/division game. since
+    // there are three rounds based on what the
+    // i learned how to do if/else statements on java as well as
+    // how to keep track of the user's score
+
+
+**debug**
+public class Main {
+    public static void main(String[] args) {
+
+        int var1 = 4;
+        if (var1 > 4){
+            System.out.println("Var1 is greater than 4");
+        }else{
+            System.out.println("Var1 is less than 4");
+        }
+
+        int var2 = 6;
+        if (var2 == 5){
+            System.out.println("Var2 is 5");
+        } else if (var2 > 5){
+            System.out.println("Var2 is greater than 5");
+        } else if (var2 < 5){
+            System.out.println("Var2 is less than 5");
+        } else{
+            System.out.println("Var2 is 6");
+        }
+
+        int var3 = 5;
+        if (var3 > 10){
+            System.out.println("Var3 is greater than 10");
+        }else {
+            System.out.println("Var3 is less than 10");
+        }
+
+        // the if statement was originally lowercase java is case-sensitive
+        // , "Marist" & "marist"
+        // are two different things
+        if ("Marist" == "Marist") {
+            System.out.println("Marist college!");
+        } else{
+            System.out.println("Not marist college :(!");
+        }
+
+
+    }
+}
+    
