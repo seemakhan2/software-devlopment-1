@@ -1,0 +1,76 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("give me a word!");
+        String input = sc.nextLine();
+
+        for (int i=0; i < input.length(); i++) {
+        System.out.println(input.charAt(i));
+
+        }
+
+
+        }
+    }
+// from assignment three i learned "char.At" will return each character
+// from what i is. I utilized Copilot, which is where i learned about char.At.
+// this code basically is asking the user for a word and then the loop
+// goes through every letter the user types. input.length is also
+// something i learned as it counts the characters which helps the code figure out
+// the number of characters in the word. 
+
+Debug 
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Problem 1");
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(i);
+        }
+
+
+        System.out.println("Problem 2");
+        System.out.println("Enter a number and I will tell you the factorial: ");
+        int input = sc.nextInt();
+        int factorial = 1;
+        for (int i = 1; i <= input; i++) {
+            factorial *= i;
+        }
+        System.out.println(input + " factorial = " + factorial);
+
+
+        System.out.println("Problem 3");
+        System.out.println("Enter a number:");
+        int num = sc.nextInt();
+        int sum = 0;
+        for (int i = 1; i <= num; i += 2) {
+            sum = +1;
+        }
+        System.out.println("Sum of every other number " + num + "is" + sum);
+
+
+        //P4: Why does this loop never stop!
+        //what can you do to break out of the loop after it prints once?
+        System.out.println("Problem 4");
+        boolean run = true;
+        while (run == true) {
+            System.out.println("I printed once!");
+            run = false;
+        }
+
+        //P5: Take a string from the user and print them the reverse!
+        System.out.println("Problem 5");
+        System.out.println("Give me a string and i will write it in reverse");
+        String userInput = sc.nextLine();
+
+        String reverse = "";
+        for (int i = userInput.length()- 1; i>=0; i--) {
+            reverse += userInput.charAt(i);
+        }
+        System.out.println("reverse sting: " + reverse);
+
+    }
+    }
