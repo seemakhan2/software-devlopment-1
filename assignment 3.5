@@ -1,0 +1,47 @@
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter your yearly salary");
+        int salary = sc.nextInt();
+
+        System.out.println("Enter your yearly expenses");
+        int expenses = sc.nextInt();
+
+        //based on the household size, here is where the additional
+        // tax reduction is calculated. for each person added including
+        // yourself (user) there is 2% reduction.
+        System.out.println("Enter the amount of people in your household");
+        int people = sc.nextInt();
+        int additionalTaxReduction = 0;
+        for(int i = 0; i <= people; i++){
+            additionalTaxReduction += 2;
+        }
+        //this is where we are keeping "score" of the tax reduction
+        //  & where additional 10, 9% or 5% reduction gets applied.
+
+        int taxReduction = 0;
+        taxReduction += additionalTaxReduction;
+
+        if(salary > 50000 && people > 3){
+            taxReduction += 10;
+            System.out.println("You get a " + taxReduction+ "% reduction on taxes.");
+        } else if(salary > 30000 && people > 4){
+            taxReduction += 9;
+            System.out.println("You get a " + taxReduction+ "% reduction on taxes.");
+        } else if(salary > 70000 && people > 2){
+            taxReduction += 5;
+            System.out.println("You get a " + taxReduction+ "% reduction on taxes.");
+        } else {
+            System.out.println("No applicable reduction on taxes found.");
+        }
+
+    }
+}
+
+// i didn't use that many comments as the goal of this code is
+// to calculate the tax reduction based on your yearly salary, spendings
+// & household size. The first portion just is setting up variables. I feel
+// the explanations needed stem when the loops begin, which is what i did. 
