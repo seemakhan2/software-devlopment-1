@@ -1,0 +1,39 @@
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("these are all the numbers in my array");
+        int[] myArray = {10, 3, 295, 38, 20, 3, 4, 267, 2445, 10, 5566, 87, 93, 17, 10, 2, 87, 267, 3176, 3, 82};
+        for (int i = 0; i < myArray.length; i++) {
+            System.out.print(myArray[i] + " ");
+        }
+
+        for (int i = 0; i < myArray.length; i++) {
+            int count = 1;
+            boolean Duplicates = false;
+
+            for (int j = 0; j < i; j++) {
+                if (myArray[i] == myArray[j]) {
+                    Duplicates = true;
+                    break;
+                }
+            }
+
+            if (!Duplicates) {
+                for (int x = i + 1; x < myArray.length; x++) {
+                    if (myArray[i] == myArray[x]) {
+                        count++;
+                    }
+                }
+
+                if (count > 1) {
+                    System.out.println(myArray[i] + " " + "appears " + count + " times");
+                }
+            }
+        }
+
+        // I learned when i would have to use a break & how it was efficient in ending the loop
+        // I also learned how to work with arrays & working with duplicates within the array. 
+        // I found this a bit challenging as arrays have index's, so starting the code was a bit difficult and
+        // i had to use utilize outside resources to help me get started. 
+    }
+}
