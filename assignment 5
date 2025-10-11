@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //problem 2
+        System.out.println("Problem 2");
+        System.out.println("Enter a number and I will tell you the factorial: ");
+        int input = sc.nextInt();
+        int result = factorial(input);
+
+        System.out.println(input + " factorial = " + result);
+
+        //problem 3
+
+        System.out.println("Problem 3");
+        System.out.println("Enter a number:");
+        int num = sc.nextInt();
+        int sum =0;
+        System.out.println("Sum of every other number is " + sum);
+
+        //problem 5
+        System.out.println("Problem 5");
+        System.out.println("Give me a string and i will write it in reverse");
+        String userInput = sc.nextLine();
+        System.out.println("reverse sting: " + reverseString(userInput));
+
+        //word counter
+        System.out.println("give me a word and i will count the words in it");
+        String sentence = sc.nextLine();
+        int wordCount = countWords(sentence);
+        System.out.println(wordCount);
+    }
+
+    public static int factorial (int number) {
+        int answer = 1;
+        for (int i = 1; i <= number; i++) {
+            answer *= i;
+        }
+        return answer;
+    }
+    public static int sumEveryOther(int num){
+        int sum = 0;
+        for (int i = 1; i <= num; i += 2) {
+            sum = +i;
+        }
+        return sum;
+    }
+
+    public static String reverseString(String input) {
+        String reverse = "";
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reverse += input.charAt(i);
+        }
+        return reverse;
+    }
+
+    // create a word counter
+    public static int countWords(String sentence){
+        int count = 1;
+        for (int i= 0; i< sentence.length(); i++) {
+            if (sentence.charAt(i) == ' '){
+                count++;
+            }
+        }
+        return count;
+    }
+    // this '  ' is something i learned and had to utilize the internet to help me
+    // with my word counter. i learned that ' ' counts for a character space
+}
