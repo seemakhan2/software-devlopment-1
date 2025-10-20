@@ -1,0 +1,62 @@
+
+public class Main {
+    public static void main(String[] args) {
+        student student1 = new student("Seema Khan", "2027", 3.5, 20163136);
+        student student2 = new student("Khalisah Sanchez", "2028", 3.6, 20163188);
+        student student3 = new student("Jose Reyes", "2027", 3.7, 20163448);
+        student student4 = new student("Matthew Eiler", "2027", 3.8, 20163889);
+        student student5 = new student("Julianna Arnold", "2027", 3.9, 20163878);
+        student randomStudent = new student("Random Student", "2026", 3.2,20163188);
+
+        student1.honorRoll();
+        student2.honorRoll();
+        student3.honorRoll();
+        student4.honorRoll();
+        student5.honorRoll();
+
+        student1.freeLunch();
+        student2.freeLunch();
+        student3.freeLunch();
+        student4.freeLunch();
+        student5.freeLunch();
+        randomStudent.freeLunch();
+
+    }
+}
+
+// class section 
+
+public class student {
+    String name;
+    String year;
+    double gpa;
+    int id;
+
+    public student(String n, String y, double g, int i) {
+        name = n;
+        year = y;
+        gpa = g;
+        id = i;
+
+    }
+
+    void honorRoll() {
+        if (this.gpa > 3.6) {
+            System.out.println(this.name + " " + "is a honor roll student");
+        } else {
+            System.out.println(this.name + " " + "is not a honor roll student");
+        }
+    }
+
+    void freeLunch() {
+        if (this.id == 20163188) {
+            System.out.println(this.name + " " + "gets free lunch!");
+        } else {
+            System.out.println(this.name + " " + "does not get free lunch:/");
+        }
+    }
+}
+
+
+
+
