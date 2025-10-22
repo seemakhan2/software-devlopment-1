@@ -1,12 +1,17 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        Random Random = new Random();
+
         student student1 = new student("Seema Khan", "2027", 3.5, 20163136);
         student student2 = new student("Khalisah Sanchez", "2028", 3.6, 20163188);
         student student3 = new student("Jose Reyes", "2027", 3.7, 20163448);
         student student4 = new student("Matthew Eiler", "2027", 3.8, 20163889);
         student student5 = new student("Julianna Arnold", "2027", 3.9, 20163878);
-        student randomStudent = new student("Random Student", "2026", 3.2,20163188);
+
 
         student1.honorRoll();
         student2.honorRoll();
@@ -19,10 +24,14 @@ public class Main {
         student3.freeLunch();
         student4.freeLunch();
         student5.freeLunch();
-        randomStudent.freeLunch();
 
+        int randomId = 2000000 + Random.nextInt(999999);
+        System.out.println("Random student's ID:" + randomId);
     }
 }
+
+// i learned how to generate a random id which is something i havent done.
+// i also learned how to use classes! 
 
 // class section 
 
