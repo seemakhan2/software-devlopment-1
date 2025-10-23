@@ -1,0 +1,199 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //introduction & Rules
+        System.out.println("Welcome to deal or no deal!");
+        System.out.println("There are a lot of rules within this game:");
+        System.out.println("1) there are 26 cases in total - each case holds money in it. however this is unknown to you. ");
+        System.out.println("2) pick any of the 26 cases - the case you chose will be kept until the very end of the game");
+        System.out.println("3) after, you will open other cases to reveal the number value ");
+        System.out.println("4) after a few cases are opened, the banker offers you money to stop playing");
+        System.out.println("5) you have the option to stop playing & take the deal, or to keep playing");
+        System.out.println("6) at the end, you can choose to keep your case or switch to the last one.");
+        System.out.println("enjoy! & we will now start the game");
+
+        int[] gameCases = {1, 5, 10, 25, 50, 75, 100, 200, 300, 400, 500, 750, 1000, 5000, 10000, 25000, 50000, 75000, 100000, 200000, 300000, 400000, 500000, 750000, 1000000};
+        //caseValues();
+        //populate cases
+        int[] gameFaces = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26};
+        List<Integer> BlackList = new ArrayList<>();
+        int remCases = 26;
+        //2nd array
+
+        System.out.println("you can open other cases now!");
+        System.out.println("enter the next case you'd like to open");
+        System.out.println("or enter '0' to end the game");
+
+        //round 1
+        for (int i = 0; i <= 6; i++) {
+            System.out.println("choose your case");
+            int userInput = sc.nextInt();
+            if (BlackList.contains(userInput)) {
+                System.out.print("pick another case");
+                i--;
+            } else {
+                System.out.println("you picked" + " " + (userInput));
+                remCases--;
+                //if blacklist.contains(userInput){
+                //print the value of the case cases[input-1]
+                //both faces and cases
+                // System.out.println(gameFaces[userInput - 1]);
+                System.out.println(gameCases[userInput - 1]);
+                //gamecases: replace index with 0
+                gameCases[userInput - 1] = 0;
+                BlackList.add(userInput);
+
+            }
+        }
+        int sum = 0;
+        for (int i = 0; i < gameCases.length; i++) {
+            sum += (gameCases[i]);
+
+        }
+        System.out.println(sum / remCases);
+
+        System.out.println("do you want to take the bankers offer?");
+        sc.nextLine();
+        String userInput2 = sc.nextLine();
+        if (userInput2.equals("yes")) {
+            System.exit(0);
+        } else {
+
+        }
+        //round 2
+
+        for (int i = 0; i <= 5; i++) {
+            System.out.println("choose your case");
+            int userInput = sc.nextInt();
+            if (BlackList.contains(userInput)) {
+                System.out.print("pick another case");
+                i--;
+            } else {
+                System.out.println("you picked" + " " + (userInput));
+                remCases--;
+
+                System.out.println(gameCases[userInput - 1]);
+                gameCases[userInput - 1] = 0;
+                BlackList.add(userInput);
+
+            }
+        }
+        sum = 0;
+        for (int i = 0; i < gameCases.length; i++) {
+            sum += (gameCases[i]);
+
+        }
+        System.out.println(sum / remCases);
+
+        System.out.println("do you want to take the bankers offer?");
+        sc.nextLine();
+        userInput2 = sc.nextLine();
+        if (userInput2.equals("yes")) {
+            System.exit(0);
+        } else {
+
+        }
+
+        //round 3
+        for (int i = 0; i <= 4; i++) {
+            System.out.println("choose your case");
+            int userInput = sc.nextInt();
+            if (BlackList.contains(userInput)) {
+                System.out.print("pick another case");
+                i--;
+            } else {
+                System.out.println("you picked" + " " + (userInput));
+                remCases--;
+                System.out.println(gameCases[userInput - 1]);
+                gameCases[userInput - 1] = 0;
+                BlackList.add(userInput);
+
+            }
+        }
+        sum = 0;
+        for (int i = 0; i < gameCases.length; i++) {
+            sum += (gameCases[i]);
+
+        }
+        System.out.println(sum / remCases);
+
+        System.out.println("do you want to take the bankers offer?");
+        userInput2 = sc.nextLine();
+        if (userInput2.equals("yes")) {
+            System.exit(0);
+        } else {
+
+        }
+        //round 4
+
+        for (int i = 0; i <= 3; i++) {
+            System.out.println("choose your case");
+            int userInput = sc.nextInt();
+            if (BlackList.contains(userInput)) {
+                System.out.print("pick another case");
+                i--;
+            } else {
+                System.out.println("you picked" + " " + (userInput));
+                remCases--;
+                System.out.println(gameCases[userInput - 1]);
+                gameCases[userInput - 1] = 0;
+                BlackList.add(userInput);
+
+            }
+        }
+        sum = 0;
+        for (int i = 0; i < gameCases.length; i++) {
+            sum += (gameCases[i]);
+
+        }
+        System.out.println(sum / remCases);
+
+        System.out.println("do you want to take the bankers offer?");
+        userInput2 = sc.nextLine();
+        sc.nextLine();
+        if (userInput2.equals("yes")) {
+            System.exit(0);
+        } else {
+
+        }
+
+        // round 5
+        for (int i = 0; i <= 2; i++) {
+            System.out.println("choose your case");
+            int userInput = sc.nextInt();
+            if (BlackList.contains(userInput)) {
+                System.out.print("pick another case");
+                i--;
+            } else {
+                System.out.println("you picked" + " " + (userInput));
+                remCases--;
+                System.out.println(gameCases[userInput - 1]);
+                gameCases[userInput - 1] = 0;
+                BlackList.add(userInput);
+
+            }
+        }
+        sum = 0;
+        for (int i = 0; i < gameCases.length; i++) {
+            sum += (gameCases[i]);
+
+        }
+        System.out.println(sum / remCases);
+
+        System.out.println("do you want to take the bankers offer?");
+        userInput2 = sc.nextLine();
+        sc.nextLine();
+        if (userInput2.equals("yes")) {
+            System.exit(0);
+        } else {
+
+        }
+
+    }
+}
+
