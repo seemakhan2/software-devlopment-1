@@ -1,0 +1,60 @@
+import java.util.Stack;
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<Integer> stax = new LinkedList<Integer>();
+
+
+        stax.add(70);
+        stax.add(34);
+        stax.add(807);
+        stax.add(61);
+        stax.add(28);
+        stax.add(563);
+        stax.add(492);
+        stax.add(386);
+
+        System.out.println(stax);
+
+        // stack max & min
+
+        System.out.println("the maximum value is:" + (stax.get(2)));
+        System.out.println("the minimum value is:" + (stax.get(4)));
+
+        // stack size
+        System.out.println(stax.size());
+
+        LinkedList<Integer> linky = new LinkedList<>();
+        System.out.println("Your order number: ");
+        linky.add(10);
+        linky.add(20);
+        linky.add(30);
+        linky.add(40);
+        linky.add(50);
+        System.out.println(linky);
+
+        LinkedList<Integer> link = new LinkedList<>();
+        System.out.println("number of people in line:");
+        link.add(10);
+        link.add(20);
+        link.add(30);
+        link.add(40);
+        link.add(50);
+        System.out.println(linky);
+
+        LinkedList<Integer> linky1 = new LinkedList<>();
+        System.out.println("registers open:");
+        linky1.add(10);
+        linky1.add(20);
+        linky1.add(30);
+        linky1.add(40);
+        linky1.add(50);
+        System.out.println(linky);
+
+
+
+
+
+    }
+}
